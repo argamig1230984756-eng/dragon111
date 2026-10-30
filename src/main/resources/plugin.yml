@@ -1,0 +1,13 @@
+name: VoidDragonPhase2
+main: dev.voiddragon.VoidDragonPlugin
+version: 2.1.0
+api-version: '1.21'
+description: Three-phase Void Dragon fight - telegraphed attacks, shielded crystals, Void Wraiths.
+commands:
+  voiddragon:
+    description: Control the Void Dragon fight
+    usage: /voiddragon <start|phase2|phase3|attack|status|reset>
+    permission: voiddragon.admin
+permissions:
+  voiddragon.admin:
+    default: op

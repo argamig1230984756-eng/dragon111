@@ -1,0 +1,58 @@
+dragon:
+  max-health: 400.0
+  # Automatically take over every Ender Dragon that spawns in The End
+  auto-adopt: true
+
+phase2:
+  # Phase 2 starts when the dragon drops to this fraction of its max health
+  health-threshold: 0.5
+  transition-seconds: 6
+  # Dragon takes only this fraction of damage while at least one crystal shield is up
+  damage-multiplier-while-shielded: 0.25
+  animation-speed: 1.4
+  bossbar-title: "§5Void Dragon §8- §cPhase II"
+
+shield:
+  # radius of the purple dome drawn around each shielded crystal
+  dome-radius: 3.0
+  heal-per-second-per-crystal: 3.0
+  # Wraiths guarding each crystal. Kill them all to shatter the shield.
+  wraiths-per-crystal: 3
+  wraith-health: 14.0
+  # A shattered shield comes back after this long unless the crystal is destroyed
+  regen-seconds: 40
+  regen-wraiths: 2
+  wraith-leash-radius: 30.0
+
+void-rain:
+  enabled: true
+  interval-seconds: 14
+  telegraph-ticks: 40
+  radius: 3.5
+  damage: 8.0
+  max-targets: 3
+
+phase3:
+  # Phase 3 starts when the dragon drops to this fraction of its max health (during phase 2)
+  health-threshold: 0.25
+  animation-speed: 1.8
+  bossbar-title: "§5Void Dragon §8- §4Phase III"
+
+attacks:
+  enabled: true
+  # Seconds between attacks. Attacks stack: phase 2 adds beam + shockwave, phase 3 adds gravity well + meteors.
+  interval-seconds:
+    phase1: 9
+    phase2: 7
+    phase3: 4
+  # v3: every attack's damage is multiplied by this (1.0 = old damage)
+  damage-multiplier: 1.6
+  # Paper flips the dragon's yaw; if the dive bomb flies tail-first, set this to false
+  flip-dragon-yaw: true
+
+minions:
+  # Void Minions the dragon summons (also on phase 2 and phase 3 start)
+  per-summon: 3
+  max-alive: 10
+  health: 12.0
+  damage: 6.0
